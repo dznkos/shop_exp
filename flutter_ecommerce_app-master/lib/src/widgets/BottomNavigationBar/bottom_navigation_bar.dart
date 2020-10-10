@@ -60,6 +60,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar>
     super.dispose();
   }
 
+  // NAVIGATOR BOTTOM STYLE
   Widget _icon(IconData icon, bool isEnable, int index) {
     return Expanded(
       child: InkWell(
@@ -75,13 +76,14 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar>
               duration: Duration(milliseconds: 300),
               alignment: Alignment.center,
               decoration: BoxDecoration(
-                  color: isEnable ? LightColor.orange : Colors.blue,
+                  color: isEnable ? Colors.cyan[600] : Color.fromRGBO(5, 2, 40, 1.0),
                   boxShadow: <BoxShadow>[
+                    // control blur shadow navigator bottom
                     BoxShadow(
-                      color: isEnable ? Color(0xfffeece2) : Colors.blue,
-                      blurRadius: 10,
-                      spreadRadius: 5,
-                      offset: Offset(5, 5),
+                      color: isEnable ? Color(0xfffeece2) : Color.fromRGBO(5, 2, 40, 1.0),
+                      blurRadius: 2,
+                      spreadRadius: 1,
+                      offset: Offset(0, 5),
                     ),
                   ],
                   shape: BoxShape.circle),
@@ -90,13 +92,16 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar>
                 child: Icon(icon,
                     color: isEnable
                         ? LightColor.background
-                        : Theme.of(context).iconTheme.color),
+                        : Colors.white                        
+                        //Theme.of(context).iconTheme.color
+                        ),
               )),
         ),
       ),
     );
   }
 
+  // animacion de navigator bottom
   Widget _buildBackground() {
     final inCurve = ElasticOutCurve(0.38);
     return CustomPaint(
@@ -106,7 +111,9 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar>
             begin: Curves.easeInExpo.transform(_yController.value),
             end: inCurve.transform(_yController.value),
           ).transform(_yController.velocity.sign * 0.5 + 0.5),
-          Theme.of(context).backgroundColor),
+          Color.fromRGBO(5, 2, 40, 1.0)
+          //Theme.of(context).backgroundColor
+          ),
     );
   }
 
@@ -118,6 +125,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar>
     return width;
   }
 
+  // control press in navigator bottom
   void _handlePressed(int index) {
     if (_selectedIndex == index || _xController.isAnimating) return;
     widget.onIconPresedCallback(index);
@@ -138,6 +146,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar>
     _yController.animateTo(0.0, duration: Duration(milliseconds: 300));
   }
 
+  // icons panel bottom 
   @override
   Widget build(BuildContext context) {
     final appSize = MediaQuery.of(context).size;
@@ -165,7 +174,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar>
                 _icon(Icons.home, _selectedIndex == 0, 0),
                 _icon(Icons.search, _selectedIndex == 1, 1),
                 _icon(Icons.card_travel, _selectedIndex == 2, 2),
-                _icon(Icons.favorite_border, _selectedIndex == 3, 3),
+                _icon(Icons.shopping_cart, _selectedIndex == 3, 3),
               ],
             ),
           ),
