@@ -107,7 +107,7 @@ class ShoppingCartPage extends StatelessWidget {
     return FlatButton(
         onPressed: () {},
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-        color: LightColor.orange,
+        color: Color.fromRGBO(76, 222, 189, 1.0),
         child: Container(
           alignment: Alignment.center,
           padding: EdgeInsets.symmetric(vertical: 12),

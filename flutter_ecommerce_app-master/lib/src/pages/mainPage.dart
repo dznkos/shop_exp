@@ -89,7 +89,7 @@ class _MainPageState extends State<MainPage> {
                   padding: EdgeInsets.all(10),
                   child: Icon(
                       Icons.delete_outline,
-                      color: LightColor.orange,
+                      color: Color.fromRGBO(76, 222, 189, 1.0),
                     ),
                 ).ripple(() {}, borderRadius: BorderRadius.all(Radius.circular(13)))
                 : SizedBox()

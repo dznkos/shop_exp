@@ -61,7 +61,7 @@ class ProductCard extends StatelessWidget {
                     children: <Widget>[
                       CircleAvatar(
                         radius: 40,
-                        backgroundColor: LightColor.orange.withAlpha(40),
+                        backgroundColor: Color.fromRGBO(76, 222, 189, 1.0),
                       ),
                       Image.asset(product.image)
                     ],
@@ -75,7 +75,7 @@ class ProductCard extends StatelessWidget {
                 TitleText(
                   text: product.category,
                   fontSize: product.isSelected ? 14 : 12,
-                  color: LightColor.orange,
+                  color: Color.fromRGBO(76, 222, 189, 1.0),
                 ),
                 TitleText(
                   text: product.price.toString(),

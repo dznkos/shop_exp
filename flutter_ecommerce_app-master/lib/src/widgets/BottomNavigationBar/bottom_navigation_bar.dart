@@ -76,7 +76,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar>
               duration: Duration(milliseconds: 300),
               alignment: Alignment.center,
               decoration: BoxDecoration(
-                  color: isEnable ? Colors.cyan[600] : Color.fromRGBO(5, 2, 40, 1.0),
+                  color: isEnable ? Color.fromRGBO(76, 222, 189, 1.0) : Color.fromRGBO(5, 2, 40, 1.0),
                   boxShadow: <BoxShadow>[
                     // control blur shadow navigator bottom
                     BoxShadow(

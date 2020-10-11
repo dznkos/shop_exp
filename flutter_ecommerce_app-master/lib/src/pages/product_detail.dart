@@ -288,7 +288,7 @@ class _ProductDetailPageState extends State<ProductDetailPage>
             style: !isSelected ? BorderStyle.solid : BorderStyle.none),
         borderRadius: BorderRadius.all(Radius.circular(13)),
         color:
-            isSelected ? LightColor.orange : Theme.of(context).backgroundColor,
+            isSelected ? Color.fromRGBO(76, 222, 189, 1.0) : Theme.of(context).backgroundColor,
       ),
       child: TitleText(
         text: text,
@@ -364,7 +364,7 @@ class _ProductDetailPageState extends State<ProductDetailPage>
   FloatingActionButton _flotingButton() {
     return FloatingActionButton(
       onPressed: () {},
-      backgroundColor: LightColor.orange,
+      backgroundColor: Color.fromRGBO(76, 222, 189, 1.0),
       child: Icon(Icons.shopping_basket,
           color: Theme.of(context).floatingActionButtonTheme.backgroundColor),
     );
