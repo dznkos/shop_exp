@@ -21,6 +21,7 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       routes: Routes.getRoute(),
+      initialRoute: "MainPage",
       onGenerateRoute: (RouteSettings settings) {
 
         if (settings.name.contains('detail')) {
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
         }
         
       },
-      initialRoute: "MainPage",
+      
     );
   }
 }

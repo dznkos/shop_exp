@@ -1,3 +1,4 @@
+
 class Product{
   int id;
   String name ;
@@ -6,6 +7,7 @@ class Product{
   double price ;
   bool isliked ;
   bool isSelected ;
+
   Product({
     this.id,
     this.name, 
