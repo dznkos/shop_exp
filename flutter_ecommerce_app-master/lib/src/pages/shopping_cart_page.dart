@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ecommerce_app/src/model/data.dart';
+
 import 'package:flutter_ecommerce_app/src/model/product.dart';
 import 'package:flutter_ecommerce_app/src/themes/light_color.dart';
 import 'package:flutter_ecommerce_app/src/themes/theme.dart';
@@ -9,7 +9,24 @@ class ShoppingCartPage extends StatelessWidget {
   const ShoppingCartPage({Key key}) : super(key: key);
 
   Widget _cartItems() {
-    return Column(children: AppData.cartList.map((x) => _item(x)).toList());
+    return Container(
+        height: 300,
+        width: double.infinity,
+        color: Colors.teal,
+        child: ListView.builder(
+          itemCount: 10,
+          itemBuilder: (_ , index){
+            return Container(
+              height: 80,
+              width: double.infinity,
+              color: Colors.red,
+              child: Center(
+                child: Text('$index'),
+              )
+            );
+          },
+        ),      
+    );
   }
 
   Widget _item(Product model) {
@@ -90,13 +107,13 @@ class ShoppingCartPage extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
         TitleText(
-          text: '${AppData.cartList.length} Items',
+          text: ' 10 Items',
           color: LightColor.grey,
           fontSize: 14,
           fontWeight: FontWeight.w500,
         ),
         TitleText(
-          text: '\$${getPrice()}',
+          text: 'no price',
           fontSize: 18,
         ),
       ],
@@ -120,13 +137,13 @@ class ShoppingCartPage extends StatelessWidget {
         ));
   }
 
-  double getPrice() {
+ /*  double getPrice() {
     double price = 0;
     AppData.cartList.forEach((x) {
       price += x.price * x.id;
     });
     return price;
-  }
+  } */
 
   @override
   Widget build(BuildContext context) {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ecommerce_app/src/model/data.dart';
+
 import 'package:flutter_ecommerce_app/src/themes/light_color.dart';
 import 'package:flutter_ecommerce_app/src/themes/theme.dart';
 import 'package:flutter_ecommerce_app/src/widgets/title_text.dart';
@@ -123,7 +123,7 @@ class _ProductDetailPageState extends State<ProductDetailPage>
     );
   }
 
-  Widget _categoryWidget() {
+  /* Widget _categoryWidget() {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 0),
       width: AppTheme.fullWidth(context),
@@ -134,7 +134,7 @@ class _ProductDetailPageState extends State<ProductDetailPage>
           children:
               AppData.showThumbnailList.map((x) => _thumbnail(x)).toList()),
     );
-  }
+  } */
 
   Widget _thumbnail(String image) {
     return AnimatedBuilder(
@@ -356,7 +356,7 @@ class _ProductDetailPageState extends State<ProductDetailPage>
           fontSize: 14,
         ),
         SizedBox(height: 20),
-        Text(AppData.description),
+        Text('Descripcion'),
       ],
     );
   }
@@ -391,7 +391,7 @@ class _ProductDetailPageState extends State<ProductDetailPage>
                 children: <Widget>[
                   _appBar(),
                   _productImage(),
-                  _categoryWidget(),
+                  //_categoryWidget(),
                 ],
               ),
               _detailWidget()
