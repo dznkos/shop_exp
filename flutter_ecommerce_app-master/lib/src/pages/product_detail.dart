@@ -194,7 +194,7 @@ class _ProductDetailPageState extends State<ProductDetailPage>
                         borderRadius: BorderRadius.all(Radius.circular(10))),
                   ),
                 ),
-                SizedBox(height: 10),
+                SizedBox(height:20),
                 Container(
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -202,7 +202,7 @@ class _ProductDetailPageState extends State<ProductDetailPage>
                     children: <Widget>[
                       TitleText(text: "NIKE AIR MAX 200", fontSize: 25),
                       Column(
-                        crossAxisAlignment: CrossAxisAlignment.end,
+                        mainAxisAlignment: MainAxisAlignment.start,
                         children: <Widget>[
                           Row(
                             crossAxisAlignment: CrossAxisAlignment.center,
@@ -225,7 +225,7 @@ class _ProductDetailPageState extends State<ProductDetailPage>
                               Icon(Icons.star,
                                   color: LightColor.yellowColor, size: 17),
                               Icon(Icons.star,
-                                  color: LightColor.yellowColor, size: 17),
+                                  color: LightColor.red, size: 17),
                               Icon(Icons.star,
                                   color: LightColor.yellowColor, size: 17),
                               Icon(Icons.star_border, size: 17),

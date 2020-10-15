@@ -83,7 +83,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar>
                       color: isEnable ? Color(0xfffeece2) : Color.fromRGBO(5, 2, 40, 1.0),
                       blurRadius: 2,
                       spreadRadius: 1,
-                      offset: Offset(0, 5),
+                      offset: Offset(0, 0),
                     ),
                   ],
                   shape: BoxShape.circle),

@@ -72,12 +72,12 @@ class _MainPageState extends State<MainPage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 TitleText(
-                  text: isHomePageSelected ? 'Our' : 'Shopping',
+                  text: isHomePageSelected ? 'Ofertas' : 'Compras',
                   fontSize: 27,
                   fontWeight: FontWeight.w400,
                 ),
                 TitleText(
-                  text: isHomePageSelected ? 'Products' : 'Cart',
+                  text: isHomePageSelected ? 'Productos' : 'Pendientes',
                   fontSize: 27,
                   fontWeight: FontWeight.w700,
                 ),
